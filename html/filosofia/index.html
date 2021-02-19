@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schalke 04 | Filosofía</title>
+    <link  rel="icon"   href="../../img/user1.png" type="image/png" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/styleNoticeX.css">
+</head>
+<body>
+    
+    <section class="section">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                  <div class="testimonialBox">
+                    <a href="https://www.youtube.com/watch?v=jLsK9siLiw4" class="linkNotice">Posesión</a> 
+                    <a href="https://www.youtube.com/watch?v=6gXa_6LIgjA" class="linkNotice2">Juventud</a>
+                    <div class="content">
+                        <h3>Posesión y juventud</h3>
+                        <p>El club alemán con la llegada de racinguistadri ha decidido apostar fuerte por los jóvenes. Özil, Neuer, Matip, Draxler, Sané, Rakitic, Kolasinac... muchos grandes jugadores empezaron a despuntar jóvenes a manos del Schalke 04 y se quiere volver a recuperar esa filosofía. Nübel, Serdar, White, Bidstrup, Kutucu o Reese son una muestra de los jóvenes por los que está apostando el club y dándoles minutos. Otros como Matondo, Kabac, Harit, Kenny,.. ya tuvieron sus minutos y se fueron para hacer caja. Con estos jóvenes se pretende hacer lo mismo y seguir dándole la oportunidad a otros. Jugadores como Mascarell, Fraser o Bentaleb además están en una buena edad y otros más veteranos como Giovinco o Caligiuri ayudarán a los más jóvenes tutelándolos y ayudándoles con su experiencia. Para conseguir la mayor evolución posible de estos jugadores, se optará por un fútbol muy ofensivo que al final ha ido cambiando a uno más centrado sobretodo en la posesión del balón y que favorezca a que haya muchas jugadas y fútbol para que todo jugador mejore con la mayor rapidez posible.</p>
+                        <div class="details">
+                            <div class="imgBx">
+                                <img src="../../img/cantera.jpg" alt="">
+                            </div>
+                        </div>
+                        <br>
+                        <p>Esta filosofía, no obstante, podría cambiar dentro de no mucho. El equipo está consiguiendo muchos dinero y no sería de extrañar que poco a poco el equipo se vaya volcando más hacia un equipo que intente competir por resultados con una plantilla de mayor calidad. Ganando algunas subastas, aparte de la mejora de estos jugadores jóvenes, haría que el club buscara poner sobre el campo a los jugadores de más nivel antes que a los jóvenes que estén aún verdes para intentar lograr un buen puesto liguero. Pero de momento el equipo es el que es y con que un Bidstrup que es carne de agente libre, en un año o dos haya algún equipo que estuviera dispuesto a dar dinero por él, ya sería una victoria. O jugadores como Kutucu, que apenas darían dinero por ellos ahora mismo, en una o dos temporadas podrían revalorizarse si sigue contando con minutos y metiendo goles. Formar jóvenes y venderlos, esa es la situación actual del club mientras espera a que su momento llegue.</p>
+                    </div>
+                  </div>
+              </div>
+          </div>
+    </section>
+
+    <div class="menuToggle" onclick="ToggleMenu()"></div>
+    <div class="navigation">
+        
+        <div class="navArea">
+            <ul>
+                <li>
+                    <a href="../noticias/index.html" onmouseenter="changeImage('../../img/img2.jpg')">Noticias</a>
+                </li>
+                <li>
+                    <a href="../equipo/index.html" onmouseenter="changeImage('../../img/img3.jpg')">Equipo</a>
+                </li>
+                <li>
+                    <a href="../competiciones/index.html" onmouseenter="changeImage('../../img/img4.jpg')">Competiciones</a>
+                </li>
+                <li>
+                    <a href="../filosofia/index.html" onmouseenter="changeImage('../../img/img7.jpg')">Filosofía</a>
+                </li>
+                <li>
+                    <a href="../proximoAno/index.html" onmouseenter="changeImage('../../img/img5.jpg')">Próximo año</a>
+                </li>
+                <li>
+                    <a href="../construccion/index.html" onmouseenter="changeImage('../../img/img1.jpg')">Historia</a>
+                </li>
+            </ul>
+        </div>
+        <div class="imgArea">
+            <img src="../../img/img1.jpg" id="slider" alt="">
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+            rotate: 0, //estaba a 50
+            stretch: 0,
+            depth: 100,
+            modifier: 2, //estaba a 1
+            slideShadows: true,
+          },
+          /*loop: true,*/
+          pagination: {
+             el: '.swiper-pagination',
+          },
+        });
+
+        function changeImage(anything) {
+            document.getElementById('slider').src = anything;
+        }
+
+        function ToggleMenu() {
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            const section = document.querySelector('.section');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+            section.classList.toggle('active')
+        }
+      </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schalke 04 | Goleada Alemana</title>
+    <link  rel="icon"   href="../../img/user1.png" type="image/png" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/styleNoticeX.css">
+</head>
+<body>
+    
+    <section class="section">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                  <div class="testimonialBox">
+                    <a href="./notice2.html" class="linkNotice">Anterior</a> 
+                    <a href="./notice4.html" class="linkNotice2">Siguiente</a>
+                    <div class="content">
+                        <h3>Goleada alemana</h3>
+                        <p>Empezaba la segunda vuelta del campeonato con el Schalke en el penúltimo lugar y teniendo que jugar contra el difícil Borussia Negro. El Shaktar, que es el último, además consiguió un inesperado punto frente al líder Chelsea que le ponía igualado a puntos con el Schalke. El equipo de racinguistadri salió con la idea de hacer un fútbol de toque con Nübel en la portería, Mascarell, Serdar, White y Demme en la defensa, Bentaleb, el joven Bidstrup y Fraser en el mediocampo y Raman y Reese como enganches con Kutucu siendo el hombre más adelantado. Sin embargo se comenzó fatal encajando un gol según empezó el partido que adelantó al equipo local hasta que en el minuto 36 el joven defensa Ben White conseguía el empate.</p>
+                        <div class="details">
+                            <div class="imgBx">
+                                <img src="../../img/notice3.jpg" alt="">
+                            </div>
+                        </div>
+                        <br>
+                        <p>El Schalke no dejó de atacar y 3 minutos más tarde Bentaleb le entragaba un balón a Raman para que pusiera por delante a los visitantes y tan solo un minuto después de nuevo una asistencia de Bentaleb terminó en ocasión para Mascarell que no perdonó para poner el 1-3 con el que terminó la primera parte. En la segunda parte Bentaleb terminó su hattrick de asistencias sirviendo el balón a Serdar para poner el cuarto y en el minuto 90 un desquiciado Milenkovic se marcó en propia para poner el 1-5 definitivo devolviendo la goleada recibida en la primera jornada en la noche mágica de Sippel. Buen partido de debut de Bidstrop pero fue eclipsado por Bentaleb y su manera de dejar solos a los compañeros. Esta victoria hace coger 3 puntos de ventaja con el Shaktar y el 12º puesto está ahora a 4 puntos. Será difícil pero al no tener partidos entre semana salvo Libertadores se podría conseguir llegar al puesto 12 si los rivales tienen tropiezos.</p>
+                    </div>
+                  </div>
+              </div>
+          </div>
+    </section>
+
+    <div class="menuToggle" onclick="ToggleMenu()"></div>
+    <div class="navigation">
+        
+        <div class="navArea">
+            <ul>
+                <li>
+                    <a href="../noticias/index.html" onmouseenter="changeImage('../../img/img2.jpg')">Noticias</a>
+                </li>
+                <li>
+                    <a href="../equipo/index.html" onmouseenter="changeImage('../../img/img3.jpg')">Equipo</a>
+                </li>
+                <li>
+                    <a href="../competiciones/index.html" onmouseenter="changeImage('../../img/img4.jpg')">Competiciones</a>
+                </li>
+                <li>
+                    <a href="../filosofia/index.html" onmouseenter="changeImage('../../img/img7.jpg')">Filosofía</a>
+                </li>
+                <li>
+                    <a href="../proximoAno/index.html" onmouseenter="changeImage('../../img/img5.jpg')">Próximo año</a>
+                </li>
+                <li>
+                    <a href="../construccion/index.html" onmouseenter="changeImage('../../img/img1.jpg')">Historia</a>
+                </li>
+            </ul>
+        </div>
+        <div class="imgArea">
+            <img src="../../img/img1.jpg" id="slider" alt="">
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+            rotate: 0, //estaba a 50
+            stretch: 0,
+            depth: 100,
+            modifier: 2, //estaba a 1
+            slideShadows: true,
+          },
+          /*loop: true,*/
+          pagination: {
+             el: '.swiper-pagination',
+          },
+        });
+
+        function changeImage(anything) {
+            document.getElementById('slider').src = anything;
+        }
+
+        function ToggleMenu() {
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            const section = document.querySelector('.section');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+            section.classList.toggle('active')
+        }
+      </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schalke 04 | Fin del mercado</title>
+    <link  rel="icon"   href="../../img/user1.png" type="image/png" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/styleNoticeX.css">
+</head>
+<body>
+    
+    <section class="section">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                  <div class="testimonialBox">
+                    <a href="#" class="linkNotice">Anterior</a> 
+                    <a href="./notice2.html" class="linkNotice2">Siguiente</a>
+                    <div class="content">
+                        <h3>Fin del mercado</h3>
+                        <p>
+                            El mercado llega a su fin y el Schalke no acometio ningun fichaje. Lo que si hizo es dar boleto a multitud de jugadores. La baja mas importante sera la de Kenny, que se va al Celta por 12M €. El otro que se marcho en el mercado es Rabbi Matondo, que se fue a la Fiorentina por tan solo 1'2M €. Sorprendio esta venta cuando el manager en verano decidio apostar por el jugador, sin embargo ahora ha salido casi regalado. "Queria que Matondo fuera una parte importante del club, pero pese a darle muchos minutos no ha rendido nunca a un nivel aceptable. En el futuro puede que acabe rindiendo, pero tenemos tambien a Bidstrup y queria darle la misma oportunidad al danes. Esta mas verde que Matondo pero es un año mas joven. Ahora mismo tenemos asegurada la continuidad economica pese a ir penultimos en liga, asi que le podemos dar minutos sin problemas y nos va a dar igual poner un 10 que un 9" aseguro el manager. Toda la suerte del mundo a los dos jovenes jugadores en el Celta y la Fiorentina.
+                            
+                            
+                            Por las otras bajas no se recibio ningun dinero. Carls, Schopf y Skrzybzki recibieron el despido con efecto inmediato. Por tanto ahora mismo el equipo cuenta con Nubel y Schubert en porteria, Serdar, Demme, Mascarell, White, Caligiuri, Tameze, Oczipka, Diop en defensa, Bidstrup, Fraser y Bentaleb como medios, Raman y Reese en la mediapunta y Kutucu, Uth y Giovinco en punta.
+                            
+                            
+                            
+                        </p>
+                        <div class="details">
+                            <div class="imgBx">
+                                <img src="../../img/notice2.jfif" alt="">
+                            </div>
+                        </div>
+                        <br>
+                        <p></p>
+                    </div>
+                  </div>
+              </div>
+          </div>
+    </section>
+
+    <div class="menuToggle" onclick="ToggleMenu()"></div>
+    <div class="navigation">
+        
+        <div class="navArea">
+            <ul>
+                <li>
+                    <a href="../noticias/index.html" onmouseenter="changeImage('../../img/img2.jpg')">Noticias</a>
+                </li>
+                <li>
+                    <a href="../equipo/index.html" onmouseenter="changeImage('../../img/img3.jpg')">Equipo</a>
+                </li>
+                <li>
+                    <a href="../competiciones/index.html" onmouseenter="changeImage('../../img/img4.jpg')">Competiciones</a>
+                </li>
+                <li>
+                    <a href="../filosofia/index.html" onmouseenter="changeImage('../../img/img7.jpg')">Filosofía</a>
+                </li>
+                <li>
+                    <a href="../proximoAno/index.html" onmouseenter="changeImage('../../img/img5.jpg')">Próximo año</a>
+                </li>
+                <li>
+                    <a href="../construccion/index.html" onmouseenter="changeImage('../../img/img1.jpg')">Historia</a>
+                </li>
+            </ul>
+        </div>
+        <div class="imgArea">
+            <img src="../../img/img1.jpg" id="slider" alt="">
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+            rotate: 0, //estaba a 50
+            stretch: 0,
+            depth: 100,
+            modifier: 2, //estaba a 1
+            slideShadows: true,
+          },
+          /*loop: true,*/
+          pagination: {
+             el: '.swiper-pagination',
+          },
+        });
+
+        function changeImage(anything) {
+            document.getElementById('slider').src = anything;
+        }
+
+        function ToggleMenu() {
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            const section = document.querySelector('.section');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+            section.classList.toggle('active')
+        }
+      </script>
+</body>
+</html>

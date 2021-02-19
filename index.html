@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schalke 04 | Inicio</title>
+    <link  rel="icon"   href="./img/user1.png" type="image/png" />
+    <link rel="stylesheet" href="./css/styleIndex.css">
+</head>
+<body>
+    <div class="imgMenu">
+        <img src="./img/schalke8.jpg" id="imgMenu" alt="">
+    </div>
+    <div class="menuToggle" onclick="ToggleMenu()"></div>
+    <div class="navigation">
+        
+        <div class="navArea">
+            <ul>
+                <li>
+                    <a href="./html/noticias/index.html" onmouseenter="changeImage('./img/img2.jpg')">Noticias</a>
+                </li>
+                <li>
+                    <a href="./html/equipo/index.html" onmouseenter="changeImage('./img/img3.jpg')">Equipo</a>
+                </li>
+                <li>
+                    <a href="./html/competiciones/index.html" onmouseenter="changeImage('./img/img4.jpg')">Competiciones</a>
+                </li>
+                <li>
+                    <a href="./html/filosofia/index.html" onmouseenter="changeImage('./img/img7.jpg')">Filosofía</a>
+                </li>
+                <li>
+                    <a href="./html/proximoAno/index.html" onmouseenter="changeImage('./img/img5.jpg')">Próximo año</a>
+                </li>
+                <li>
+                    <a href="./html/construccion/index.html" onmouseenter="changeImage('./img/img1.jpg')">Historia</a>
+                </li>
+            </ul>
+        </div>
+        <div class="imgArea">
+            <img src="./img/img1.jpg" id="slider" alt="">
+        </div>
+    </div>
+
+
+    <script>
+        function changeImage(anything) {
+            document.getElementById('slider').src = anything;
+        }
+
+        function ToggleMenu() {
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schalke 04 | Ventaja</title>
+    <link  rel="icon"   href="../../img/user1.png" type="image/png" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/styleNoticeX.css">
+</head>
+<body>
+    
+    <section class="section">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                  <div class="testimonialBox">
+                    <a href="./notice3.html" class="linkNotice">Anterior</a> 
+                    <a href="#" class="linkNotice2">Siguiente</a>
+                    <div class="content">
+                        <h3>Ventaja</h3>
+                        <p>Tras el parón del equipo alemán llegaba un partido muy importante frente a la Sampdoria en su campo para disputar la ida de Cuartos de Final de la Libertadores. Los alemanes salieron con el 11 de gala con Nübel bajo palos, Mascarell, Serdar, White y Demme en la línea defensiva, Diop como pivote defensivo con Bentaleb, Cagliuri y Fraser con Raman por delante y Giovinco como único punta. El conjunto alemán volvió a buscar la posesión del partido y le salió mejor aún que la última vez. El partido comenzó genial ya que Murillo fue expulsado en el minuto 10 por una dura entrada a Fraser. Diez minutos después además el escocés volvía a desequilibrar el partido rematando un pase de Marcarell para adelantar al conjunto alemán. Sin embargo la alegría se acabó cuando Nübel se retiró lesionado y tuvo que entrar Schübert para que solo 3 minutos después Caprari rematar un centro de Linetty para poner el empate.</p>
+                        <div class="details">
+                            <div class="imgBx">
+                                <img src="../../img/notice4.webp" alt="">
+                            </div>
+                        </div>
+                        <br>
+                        <p>Mascarell en el 42 se quedó mano a mano con el portero y tras regatearlo, éste le derribó. No sacó tarjeta roja pese a la ocasión manifiesta de gol pero si pitó penalty y Giovinco lo transformó para adelantar a su equipo. Tras el descanso Mascarell seguía estando en forma y tras irse de Chabot le puso un pase perfetcto a Giovinco que no desperdició el italiano poniendo el tercero. Sin embargo, en el 56 una entrada muy fea de Giovinco le costó la expulsión y 2 minutos más tarde Mascarell se lesionó el tobillo y entró por el Tameze. En pocos minutos se tuvieron que ir un jugador con dos goles y otro con dos asistencias. La Sampdoria apretó y de nuevo Caprari marcó a pase de Vieira. El Schalke aun así seguía dominando el partido y al final en el descuento un tanto de Raman tras un rechace y otro de Serdar tras un córner botado por Bentaleb ponían el 2-5 definitivo que da una gran ventaja al equipo alemán para la vuelta.</p>
+                    </div>
+                  </div>
+              </div>
+          </div>
+    </section>
+
+    <div class="menuToggle" onclick="ToggleMenu()"></div>
+    <div class="navigation">
+        
+        <div class="navArea">
+            <ul>
+                <li>
+                    <a href="../noticias/index.html" onmouseenter="changeImage('../../img/img2.jpg')">Noticias</a>
+                </li>
+                <li>
+                    <a href="../equipo/index.html" onmouseenter="changeImage('../../img/img3.jpg')">Equipo</a>
+                </li>
+                <li>
+                    <a href="../competiciones/index.html" onmouseenter="changeImage('../../img/img4.jpg')">Competiciones</a>
+                </li>
+                <li>
+                    <a href="../filosofia/index.html" onmouseenter="changeImage('../../img/img7.jpg')">Filosofía</a>
+                </li>
+                <li>
+                    <a href="../proximoAno/index.html" onmouseenter="changeImage('../../img/img5.jpg')">Próximo año</a>
+                </li>
+                <li>
+                    <a href="../construccion/index.html" onmouseenter="changeImage('../../img/img1.jpg')">Historia</a>
+                </li>
+            </ul>
+        </div>
+        <div class="imgArea">
+            <img src="../../img/img1.jpg" id="slider" alt="">
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+            rotate: 0, //estaba a 50
+            stretch: 0,
+            depth: 100,
+            modifier: 2, //estaba a 1
+            slideShadows: true,
+          },
+          /*loop: true,*/
+          pagination: {
+             el: '.swiper-pagination',
+          },
+        });
+
+        function changeImage(anything) {
+            document.getElementById('slider').src = anything;
+        }
+
+        function ToggleMenu() {
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            const section = document.querySelector('.section');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+            section.classList.toggle('active')
+        }
+      </script>
+</body>
+</html>

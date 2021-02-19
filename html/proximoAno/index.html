@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schalke 04 | Próximo Año</title>
+    <link  rel="icon"   href="../../img/user1.png" type="image/png" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/styleNoticeX.css">
+</head>
+<body>
+    
+    <section class="section">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                  <div class="testimonialBox">
+                    <a href="https://ligavirtualmanager.activoforo.com/t78467-sch-plantilla" class="linkNotice">Plantilla</a> 
+                    <a href="https://ligavirtualmanager.activoforo.com/t82366-presupuesto-schalke-04-2020-21" class="linkNotice5">Presupuesto</a>
+                    <div class="content">
+                        <h3>Buena economía</h3>
+                        <p>El equipo alemán está todavía centrado en esta temporada, intentando llegar lo más lejos posible en Libertadores para poder mejorar su premio económico y en liga se buscaría intentar entrar entre los 12 primeros para conseguir más premio y poder disputar la Libertadores otro año. Aun así parece que ya están poniéndose manos a la obra de cara a la planificación de la próxima temporada. Para esta segunda parte del calendario se han quedado tan solo con 18 jugadores, suficientes al disputar solo Liga y Libertadores y que hacen que el precio de los salarios tan solo sea de 85M €. Actualmente se cuenta con más de 88M € de presupuesto, por lo que todo el dinero que se reciba por los patrocinadores el equipo lo sacará en limpio. De momento se han conseguido 5M € por la copa LVM, 8M € por la liga del KO y 35M € por la Libertadores.En caso de cumplir en la vuelta frente a la Sampdoria se recibirían 10M € más y otros 10/20M € en caso de jugar la final/ganarla. En cuanto a la competición liguera tan solo se recibirán 20M € (el mínimo posible) a no ser que se llegue al puesto 12 (actualmente a 4 puntos) o al puesto 9 (a 8 puntos), cosa que de momento parece improbable.</p>
+                        <div class="details">
+                            <div class="imgBx">
+                                <img src="../../img/plnatilla.jpg" alt="">
+                            </div>
+                        </div>
+                        <br>
+                        <p>Por tanto, en el peor de los casos el Schalke contará con 71M € limpios para final de temporada, que se podrían ver incrementados de 10 en 10 en caso de un buen papel en las competiciones que quedan. En cuanto a la plantilla se verá mermada en cuanto integrantes al poner fin a su carrera como jugador Caligiuri, Giovinco, Diop y Oczipka, dejando en 14 el número de jugadores del equipo. Racinguistadri por lo visto quiere una plantilla de 22 jugadores para la temporada que viene en caso de jugar competición europea, pero de lo contrario 18 jugadores volverán a ser más que suficientes. Los 4 u 8 huecos habrá que llenarlos en subastas o mediante el mercado. La posición de portero no necesita ninguna adquisición al estar fijos Nübel y Schübert. En defensa están White, Serdar, Mascarell y Demme además de Tameze. Harían falta 2 o 3 jugadores para el banquillo o buscar un titular y hacer caja con Demme. En mediocampo siguen Bentaleb, Bidstrup, Fraser y haría falta 2 jugadores más. Raman y Reese son los únicos mediapuntas y seguirían, de no irse ninguno difícilmente se irán. Arriba Kutucu y Uth son los únicos delanteros que hay, aquí es donde se quiere dejar la pasta el equipo tras la negativa del Newcastle de vender a Saint Maximin o haber perdido la puja por Ansu Fati. De jugar en Europa harían falta dos delanteros, un titular y otro suplente junto a Uth.</p>
+                    </div>
+                  </div>
+              </div>
+          </div>
+    </section>
+
+    <div class="menuToggle" onclick="ToggleMenu()"></div>
+    <div class="navigation">
+        
+        <div class="navArea">
+            <ul>
+                <li>
+                    <a href="../noticias/index.html" onmouseenter="changeImage('../../img/img2.jpg')">Noticias</a>
+                </li>
+                <li>
+                    <a href="../equipo/index.html" onmouseenter="changeImage('../../img/img3.jpg')">Equipo</a>
+                </li>
+                <li>
+                    <a href="../competiciones/index.html" onmouseenter="changeImage('../../img/img4.jpg')">Competiciones</a>
+                </li>
+                <li>
+                    <a href="../filosofia/index.html" onmouseenter="changeImage('../../img/img7.jpg')">Filosofía</a>
+                </li>
+                <li>
+                    <a href="../proximoAno/index.html" onmouseenter="changeImage('../../img/img5.jpg')">Próximo año</a>
+                </li>
+                <li>
+                    <a href="../construccion/index.html" onmouseenter="changeImage('../../img/img1.jpg')">Historia</a>
+                </li>
+            </ul>
+        </div>
+        <div class="imgArea">
+            <img src="../../img/img1.jpg" id="slider" alt="">
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+            rotate: 0, //estaba a 50
+            stretch: 0,
+            depth: 100,
+            modifier: 2, //estaba a 1
+            slideShadows: true,
+          },
+          /*loop: true,*/
+          pagination: {
+             el: '.swiper-pagination',
+          },
+        });
+
+        function changeImage(anything) {
+            document.getElementById('slider').src = anything;
+        }
+
+        function ToggleMenu() {
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            const section = document.querySelector('.section');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+            section.classList.toggle('active')
+        }
+      </script>
+</body>
+</html>
