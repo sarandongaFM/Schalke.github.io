@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schalke 04 | Bienvenido Pedri</title>
+    <link  rel="icon"   href="../../img/user1.png" type="image/png" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/styleNoticeX.css">
+</head>
+<body>
+    
+    <section class="section">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                  <div class="testimonialBox">
+                    <a href="./notice9.html" class="linkNotice">Anterior</a> 
+                    <a href="#" class="linkNotice2">Siguiente</a>
+                    <div class="content">
+                        <h3>Bienvenido Pedri</h3>
+                        <p>La afición del Schalke está de enhorabuena. Llega al club uno de los mediocentros más prometedores con más calidad y recorrido por delante. Costó hacerse con el 40M € tras una carrera con el Eintracht por hacerse con el jugador. FInalmente el canario llegará al Schalke para añadir más calidad al mediocampo junto a Bentaleb o Fraser. Pedri era un fichaje que hacía falta. El conjunto alemán ya está preparando la próxima campaña y la portería con Nübel que será 13 la temporada que viene y Schubert la tiene cerrada. En defensa Serdar será 12-12 y White llegará durante la temporada. Mascarell lkes acompañará y se buscaría un defensa de nivel para ser el cuarto titular y pasar a Demme al banquillo junto a Tameze y dos jugadores similares. En el medio se buscaba otro jugador que marcara las diferencias para jugar junto a Bentaleb y Fraser y ahí es donde encaja a la perfección el canario. También se buscará a dos medios para el papel de suplente. En la delantera también se busca un jugador que pueda ser el titular junto a Kutucu la temporada que viene. Así que en resumen, el equipo quería un buen defensa, un buen medio y un buen delantero y se iba a dejar los 90M € en ellos, así que ha empezado soltando 40M € por el medio. Un precio quizás excesivo pero Pedri puede acabar dando muchas alegrías al club. Aún quedan 50M para gastar en un defensa y un delantero.</p>
+                        <div class="details">
+                            <div class="imgBx">
+                                <img src="../../img/notice10.jpg" alt="">
+                            </div>
+                        </div>
+                        <br>
+                        <p>Pedri debutará hoy frente al Chelsea en un encuentro complicadísimo ante el líder. El equipo aún no conoce la derrota en esta segunda vuelta pero todo indica a que la va a conocer en este encuentro. En la ida el equipo inglés ya ganó 4-0. Además el equipo alemán se nfrentará el Jueves ante la Sampdoria en la vuelta de los cuartos de Libertadores, con los deberes hechos en la ida pero hay que rematar la faena. Sin tiempo para descansar, se medirán al Bremen que está octavo en la clasificación. Parte clave por tanto de la temporada, así que la llegada de Pedri justo ahora ha venido de perlas. Si se consiguiera sacar un empate frente al Chelsea, pasar de ronda en Europa y una victoria ante el Bremen sería para descorchar el champagne. El equipo está a 4 puntos de Europa y tiene que apretar ahora para entrar o al menos no descolgarse. El equipo justo por encima del Schalke, el Villarreal, tiene entrenador nuevo que debutó con goleada y también ha hecho 2 fichajes para su equipo, así que va a costar avanzar. Sin embargo en este grupo todos pueden ganar a todos y por eso mientras se vayan sumando puntos regularmente habrá opciones de llegar a Europa.</p>
+                    </div>
+                  </div>
+              </div>
+          </div>
+    </section>
+
+    <div class="menuToggle" onclick="ToggleMenu()"></div>
+    <div class="navigation">
+        
+        <div class="navArea">
+            <ul>
+                <li>
+                    <a href="../noticias/index.html" onmouseenter="changeImage('../../img/img2.jpg')">Noticias</a>
+                </li>
+                <li>
+                    <a href="../equipo/index.html" onmouseenter="changeImage('../../img/img3.jpg')">Equipo</a>
+                </li>
+                <li>
+                    <a href="../competiciones/index.html" onmouseenter="changeImage('../../img/img4.jpg')">Competiciones</a>
+                </li>
+                <li>
+                    <a href="../filosofia/index.html" onmouseenter="changeImage('../../img/img7.jpg')">Filosofía</a>
+                </li>
+                <li>
+                    <a href="../proximoAno/index.html" onmouseenter="changeImage('../../img/img5.jpg')">Próximo año</a>
+                </li>
+                <li>
+                    <a href="../construccion/index.html" onmouseenter="changeImage('../../img/img1.jpg')">Historia</a>
+                </li>
+            </ul>
+        </div>
+        <div class="imgArea">
+            <img src="../../img/img1.jpg" id="slider" alt="">
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+            rotate: 0, //estaba a 50
+            stretch: 0,
+            depth: 100,
+            modifier: 2, //estaba a 1
+            slideShadows: true,
+          },
+          /*loop: true,*/
+          pagination: {
+             el: '.swiper-pagination',
+          },
+        });
+
+        function changeImage(anything) {
+            document.getElementById('slider').src = anything;
+        }
+
+        function ToggleMenu() {
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            const section = document.querySelector('.section');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+            section.classList.toggle('active')
+        }
+      </script>
+</body>
+</html>
